@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/custom-scrollbar.scss';
+
+:root {
+  --color-dark: #1E1E1E;
+  --color-more-dark: #121212;
+  --color-light: #FFFFFF;
+  --color-gray: #B3B3B3;
+  --color-accent: #ce93d8;
+}
+
+
+body {
+  background-color: var(--color-dark);
+  margin: 0;
+  padding: 0;
+}
