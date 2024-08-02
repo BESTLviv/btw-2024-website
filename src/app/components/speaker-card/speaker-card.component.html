@@ -1,0 +1,60 @@
+<div class="flip-card" (click)="flipCard()" [class.flipped]="isFlipped">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+
+      <div class="speaker-card">
+        <div class="speaker-card__img">
+          <img [src]="imageUrl" alt="{{ name }}">
+        </div>
+        <div class="speaker-card__content">
+          <h2 class="speaker-card__name">{{ name }}</h2>
+          <p class="speaker-card__position">{{ position }}</p>
+          <p class="speaker-card__description">{{ description }}</p>
+          <div class="speaker-card__socials">
+            <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social">
+              <img ngSrc="speakers/instagram.svg" height="25" width="25" alt="Instagram"
+                   class="speaker-card__social-icon">
+            </a>
+            <a *ngIf="telegramUrl" [href]="telegramUrl" class="speaker-card__social">
+              <img ngSrc="speakers/telegram.svg" height="25" width="25" alt="Telegram"
+                   class="speaker-card__social-icon">
+            </a>
+            <a *ngIf="linkedinUrl" [href]="linkedinUrl" class="speaker-card__social">
+              <img ngSrc="speakers/linkedin.svg" height="25" width="25" alt="LinkedIn"
+                   class="speaker-card__social-icon">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flip-card-back">
+      <div class="speaker-lecture">
+        <p class="speaker-lecture__text">{{ lectureTitle }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<div class="speaker-card">-->
+<!--  <div class="speaker-card__img">-->
+<!--    <img [src]="imageUrl" alt="{{ name }}">-->
+<!--  </div>-->
+<!--  <div class="speaker-card__content">-->
+<!--    <h2 class="speaker-card__name">{{ name }}</h2>-->
+<!--    <p class="speaker-card__position">{{ position }}</p>-->
+<!--    <p class="speaker-card__description">{{ description }}</p>-->
+<!--    <div class="speaker-card__socials">-->
+<!--      <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social">-->
+<!--        <img ngSrc="speakers/instagram.svg" height="25" width="25" alt="Instagram" class="speaker-card__social-icon">-->
+<!--      </a>-->
+<!--      <a *ngIf="telegramUrl" [href]="telegramUrl" class="speaker-card__social">-->
+<!--        <img ngSrc="speakers/telegram.svg" height="25" width="25" alt="Telegram" class="speaker-card__social-icon">-->
+<!--      </a>-->
+<!--      <a *ngIf="linkedinUrl" [href]="linkedinUrl" class="speaker-card__social">-->
+<!--        <img ngSrc="speakers/linkedin.svg" height="25" width="25" alt="LinkedIn" class="speaker-card__social-icon">-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

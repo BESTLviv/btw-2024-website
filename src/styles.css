@@ -1,59 +1,43 @@
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: linear-gradient(90deg, #000, #000 1px, #111 0, #111 5px) 0 0, linear-gradient(90deg, #222, #222 1px, #111 0, #111 5px) 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff, #ff00ff);
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
-  border-radius: 10px;
-  border: 2px solid #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #ff00ff, #00ffff);
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff, #ff00ff, #00ffff);
-  background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap");
 * {
   scrollbar-width: thin;
-  scrollbar-color: #ff00ff #111;
+  scrollbar-color: var(--color-light-purple) var(--color-gray);
 }
 
+@font-face {
+  font-family: "Work Sans";
+  src: url("/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
 :root {
-  --color-dark: #1E1E1E;
-  --color-more-dark: #121212;
-  --color-light: #FFFFFF;
-  --color-gray: #B3B3B3;
-  --color-accent: #ce93d8;
+  --color-white: #F7F7F7;
+  --color-dark-purple: #3A1972;
+  --color-light-purple: #6109D1;
+  --color-gray: #181818;
+  --color-black: #080808;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background-color: var(--color-dark);
+  height: 100%;
+  background-color: green;
   margin: 0;
   padding: 0;
 }

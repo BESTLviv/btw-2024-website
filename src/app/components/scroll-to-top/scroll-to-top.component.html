@@ -1,0 +1,10 @@
+<button
+  *ngIf="isVisible"
+  (click)="scrollToTop()"
+  class="scroll-to-top"
+  [style.--progress]="scrollProgress + '%'">
+  <i class="arrow-up"></i>
+</button>
+
+
+

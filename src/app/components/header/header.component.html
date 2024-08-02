@@ -1,16 +1,21 @@
-<header>
-  <div class="logo">Logo</div>
-  <nav [class.active]="isMenuOpen">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="hamburger" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+<header [ngClass]="{'scrolled': isScrolled}">
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <nav [class.active]="isMenuOpen" #nav>
+        <ul>
+          <li><a [ngClass]="{'active': activeSection === 'hero'}" (click)="scrollTo('hero')">Про нас</a></li>
+          <li><a [ngClass]="{'active': activeSection === 'somec1'}" (click)="scrollTo('somec1')">Статистика</a></li>
+          <li><a [ngClass]="{'active': activeSection === 'somec2'}" (click)="scrollTo('somec2')">Організатори</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </div>
 </header>

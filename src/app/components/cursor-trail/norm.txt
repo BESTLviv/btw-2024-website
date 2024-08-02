@@ -1,0 +1,89 @@
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ElementRef,
+  ViewChildren,
+  QueryList,
+} from '@angular/core';
+import {NgForOf} from "@angular/common";
+
+@Component({
+  selector: 'app-cursor-trail',
+  standalone: true,
+  imports: [
+    NgForOf
+  ],
+  templateUrl: './cursor-trail.component.html',
+  styleUrl: './cursor-trail.component.scss'
+})
+export class CursorTrailComponent implements OnInit, AfterViewInit {
+  @ViewChildren('circle') circles!: QueryList<ElementRef>;
+
+  coords = {x: 0, y: 0};
+  colors = [
+    "#ffb56b",
+    "#fdaf69",
+    "#f89d63",
+    "#f59761",
+    "#ef865e",
+    "#ec805d",
+    "#e36e5c",
+    "#df685c",
+    "#d5585c",
+    "#d1525c",
+    "#c5415d",
+    "#c03b5d",
+    "#b22c5e",
+    "#ac265e",
+    "#9c155f",
+    "#950f5f",
+    "#830060",
+    "#7c0060",
+    "#680060",
+    "#60005f",
+    "#48005f",
+    "#3d005e"
+  ];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    window.addEventListener('mousemove', (e) => {
+      this.coords.x = e.clientX;
+      this.coords.y = e.clientY;
+    });
+  }
+
+  ngAfterViewInit(): void {
+    this.circles.forEach((circle, index) => {
+      const el = circle.nativeElement;
+      el.x = 0;
+      el.y = 0;
+      el.style.backgroundColor = this.colors[index % this.colors.length];
+    });
+
+    this.animateCircles();
+  }
+
+  animateCircles(): void {
+    let x = this.coords.x;
+    let y = this.coords.y;
+
+    this.circles.forEach((circle, index) => {
+      const el = circle.nativeElement;
+      el.style.left = x - 12 + 'px';
+      el.style.top = y - 12 + 'px';
+      el.style.scale = (this.circles.length - index) / this.circles.length;
+
+      el.x = x;
+      el.y = y;
+
+      const nextCircle = this.circles.get(index + 1)?.nativeElement || this.circles.first.nativeElement;
+      x += (nextCircle.x - el.x) * 0.3;
+      y += (nextCircle.y - el.y) * 0.3;
+    });
+
+    requestAnimationFrame(() => this.animateCircles());
+  }
+}

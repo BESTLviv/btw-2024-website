@@ -1,0 +1,84 @@
+
+.fullscreen-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  //margin: 150px auto 0 auto;
+  //border: 1px solid red;
+  max-width: 1224px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.top-line, .bottom-line {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: white;
+}
+
+.star{
+  img{
+    margin-top: 3px;
+    width: 83px;
+  }
+}
+
+.text-come {
+  font-family: "Bruno Ace", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 15px;
+  font-size: 40px;
+}
+
+.text-with {
+  font-family: "Bruno Ace", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 15px;
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 60px;
+  margin: 20px 0;
+  letter-spacing: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.description {
+  font-size: 16px;
+  max-width: 80%;
+  margin: 20px 0;
+}
+
+.explore-btn {
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #3700b3;
+  }
+}

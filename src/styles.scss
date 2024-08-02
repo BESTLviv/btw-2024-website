@@ -1,16 +1,33 @@
+
 @import 'styles/custom-scrollbar.scss';
+@import 'styles/fonts.scss';
+
+
+
 
 :root {
-  --color-dark: #1E1E1E;
-  --color-more-dark: #121212;
-  --color-light: #FFFFFF;
-  --color-gray: #B3B3B3;
-  --color-accent: #ce93d8;
+  --color-white: #F7F7F7;
+  --color-dark-purple: #3A1972;
+  --color-light-purple: #6109D1;
+  --color-gray: #181818;
+  --color-black: #080808;
+}
+
+* {
+  box-sizing: border-box;
+  //cursor: none !important;
+  //cursor: url("../public/rocket_cursor2.svg"), auto !important;
 }
 
 
 body {
-  background-color: var(--color-dark);
+  height: 100%;
+  //background-color: var(--color-black);
+  background-color: green;
   margin: 0;
   padding: 0;
 }
+
+
+
+

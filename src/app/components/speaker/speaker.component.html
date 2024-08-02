@@ -1,0 +1,19 @@
+<div class="speaker-card">
+  <img [src]="imageUrl" alt="{{ name }}" class="speaker-card__image">
+  <div class="speaker-card__info">
+    <h2 class="speaker-card__name">{{ name }}</h2>
+    <p class="speaker-card__position">{{ position }}</p>
+    <p class="speaker-card__description">{{ description }}</p>
+    <div class="speaker-card__social-links">
+      <a *ngIf="instagramUrl" [href]="instagramUrl" target="_blank" class="speaker-card__social-link speaker-card__social-link--instagram">
+        <img src="speakers/instagram.svg" alt="Instagram" class="speaker-card__social-icon">
+      </a>
+      <a *ngIf="telegramUrl" [href]="telegramUrl" target="_blank" class="speaker-card__social-link speaker-card__social-link--telegram">
+        <img src="speakers/telegram.svg" alt="Telegram" class="speaker-card__social-icon">
+      </a>
+      <a *ngIf="linkedinUrl" [href]="linkedinUrl" target="_blank" class="speaker-card__social-link speaker-card__social-link--linkedin">
+        <img src="speakers/linkedin.svg" alt="LinkedIn" class="speaker-card__social-icon">
+      </a>
+    </div>
+  </div>
+</div>
