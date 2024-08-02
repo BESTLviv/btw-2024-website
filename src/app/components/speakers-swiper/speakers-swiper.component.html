@@ -1,11 +1,88 @@
-<swiper-container class="mySwiper" navigation="true">
-  <swiper-slide>Slide 1</swiper-slide>
-  <swiper-slide>Slide 2</swiper-slide>
-  <swiper-slide>Slide 3</swiper-slide>
-  <swiper-slide>Slide 4</swiper-slide>
-  <swiper-slide>Slide 5</swiper-slide>
-  <swiper-slide>Slide 6</swiper-slide>
-  <swiper-slide>Slide 7</swiper-slide>
-  <swiper-slide>Slide 8</swiper-slide>
-  <swiper-slide>Slide 9</swiper-slide>
-</swiper-container>
+<!--class="mySwiper"-->
+
+<!--pagination="true"-->
+<!--breakpoints='{"320": {"slidesPerView": 2}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 2}}'-->
+<!--class="mySwiper"-->
+
+<!--pagination="true"-->
+<!--pagination-clickable="true"-->
+
+
+<!--slides-per-view="2"-->
+<!--navigation="true"-->
+
+
+<div class="swiper-container-wrapper">
+  <div class="swiper-container">
+    <swiper-container #swiper1>
+      <swiper-slide>
+        <app-speaker-card
+          [name]="'Юлія Ющук'"
+          [position]="'co-CEO'"
+          [description]="'Співзасновниця та Chief Process Officer в Sales агенстві, CMO в Don\'t Panic IT Recruiting Agency та Juniverse стартапу для розвитку джунів. Працюю з особистим брендом для продажів, фандрайзингу, рекрутингу'"
+          [imageUrl]="'speakers/speaker11.png'"
+          [instagramUrl]="'https://instagram.com/oleksii_tatarchynskyi'"
+          [telegramUrl]="'https://t.me/spiowm'"
+          [linkedinUrl]="'https://www.linkedin.com/in/oleksii-tatarchynskyi-5a81b8196'"
+          [lectureTitle]="'Особистий бренд в IT'"
+        ></app-speaker-card>
+      </swiper-slide>
+      <swiper-slide>
+        <app-speaker-card
+          [name]="'Юлія Ющук2'"
+          [position]="'co-CEO'"
+          [description]="'Співзасновниця та Chief Process Officer в Sales агенстві, CMO в Don\'t Panic IT Recruiting Agency та Juniverse стартапу для розвитку джунів. Працюю з особистим брендом для продажів, фандрайзингу, рекрутингу'"
+          [imageUrl]="'speakers/speaker11.png'"
+          [instagramUrl]="'https://instagram.com/oleksii_tatarchynskyi'"
+          [telegramUrl]="'https://t.me/spiowm'"
+          [linkedinUrl]="'https://www.linkedin.com/in/oleksii-tatarchynskyi-5a81b8196'"
+          [lectureTitle]="'Особистий бренд в IT'"
+        ></app-speaker-card>
+      </swiper-slide>
+      <swiper-slide>
+        <app-speaker-card
+          [name]="'Юлія Ющук3'"
+          [position]="'co-CEO'"
+          [description]="'Співзасновниця та Chief Process Officer в Sales агенстві, CMO в Don\'t Panic IT Recruiting Agency та Juniverse стартапу для розвитку джунів. Працюю з особистим брендом для продажів, фандрайзингу, рекрутингу'"
+          [imageUrl]="'speakers/speaker11.png'"
+          [instagramUrl]="'https://instagram.com/oleksii_tatarchynskyi'"
+          [telegramUrl]="'https://t.me/spiowm'"
+          [linkedinUrl]="'https://www.linkedin.com/in/oleksii-tatarchynskyi-5a81b8196'"
+          [lectureTitle]="'Особистий бренд в IT'"
+        ></app-speaker-card>
+      </swiper-slide>
+      <swiper-slide>
+        <app-speaker-card
+          [name]="'Юлія Ющук4'"
+          [position]="'co-CEO'"
+          [description]="'Співзасновниця та Chief Process Officer в Sales агенстві, CMO в Don\'t Panic IT Recruiting Agency та Juniverse стартапу для розвитку джунів. Працюю з особистим брендом для продажів, фандрайзингу, рекрутингу'"
+          [imageUrl]="'speakers/speaker11.png'"
+          [instagramUrl]="'https://instagram.com/oleksii_tatarchynskyi'"
+          [telegramUrl]="'https://t.me/spiowm'"
+          [linkedinUrl]="'https://www.linkedin.com/in/oleksii-tatarchynskyi-5a81b8196'"
+          [lectureTitle]="'Особистий бренд в IT'"
+        ></app-speaker-card>
+      </swiper-slide>
+      <swiper-slide>
+        <app-speaker-card
+          [name]="'Юлія Ющук5'"
+          [position]="'co-CEO'"
+          [description]="'Співзасновниця та Chief Process Officer в Sales агенстві, CMO в Don\'t Panic IT Recruiting Agency та Juniverse стартапу для розвитку джунів. Працюю з особистим брендом для продажів, фандрайзингу, рекрутингу'"
+          [imageUrl]="'speakers/speaker11.png'"
+          [instagramUrl]="'https://instagram.com/oleksii_tatarchynskyi'"
+          [telegramUrl]="'https://t.me/spiowm'"
+          [linkedinUrl]="'https://www.linkedin.com/in/oleksii-tatarchynskyi-5a81b8196'"
+          [lectureTitle]="'Особистий бренд в IT'"
+        ></app-speaker-card>
+      </swiper-slide>
+    </swiper-container>
+
+  </div>
+  <button class="custom-nav-button custom-prev-button" (click)="prevSlide()">
+    <img src="/speakers/left-arrow.svg" alt="Previous">
+  </button>
+  <button class="custom-nav-button custom-next-button" (click)="nextSlide()">
+    <img src="/speakers/right-arrow.svg" alt="Next">
+  </button>
+
+</div>

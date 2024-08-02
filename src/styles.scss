@@ -1,8 +1,7 @@
 
 @import 'styles/custom-scrollbar.scss';
 @import 'styles/fonts.scss';
-
-
+//@import 'swiper/swiper.scss';
 
 
 :root {
@@ -22,8 +21,8 @@
 
 body {
   height: 100%;
-  //background-color: var(--color-black);
-  background-color: green;
+  background-color: var(--color-black);
+  //background-color: green;
   margin: 0;
   padding: 0;
 }

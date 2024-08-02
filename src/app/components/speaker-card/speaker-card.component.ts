@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {ChangeDetectorRef, Component, Input} from '@angular/core';
 import {NgIf, NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -23,9 +23,11 @@ export class SpeakerCardComponent {
 
   isFlipped: boolean = false;
 
-  flipCard() {
-    this.isFlipped = !this.isFlipped;
-  }
+  constructor(private cd: ChangeDetectorRef) { }
 
+  flipCard(): void {
+    this.isFlipped = !this.isFlipped;
+    this.cd.markForCheck();
+  }
 
 }
