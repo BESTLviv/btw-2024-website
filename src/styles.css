@@ -23,6 +23,12 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "SegmentAKeyTrial";
+  src: url("/fonts/SegmentAKeyTrial-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 :root {
   --color-white: #F7F7F7;
   --color-dark-purple: #3A1972;
@@ -33,6 +39,7 @@
 
 * {
   box-sizing: border-box;
+  cursor: none !important;
 }
 
 body {

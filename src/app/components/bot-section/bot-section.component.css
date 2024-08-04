@@ -1,0 +1,108 @@
+.container {
+  width: 100%;
+  background: var(--color-gray) url("/bot-section/grid.png") center center/cover no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 130px;
+}
+
+.content__header {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 51px;
+  color: var(--color-white);
+  margin: 43px 0 60px 0;
+  text-align: center;
+}
+.content__planet {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+}
+.content__planet:hover {
+  opacity: 0.8;
+}
+
+.about {
+  margin: 85px 0 0 0;
+  max-width: 800px;
+  border: 2px solid var(--color-white);
+  border-radius: 24px;
+}
+.about__wrapper {
+  margin: 10px 40px 30px 40px;
+}
+.about__header {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29px;
+  color: var(--color-white);
+  margin: 0 0 25px 0;
+}
+.about__description {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+  width: 125px;
+  height: 140px;
+}
+.group:not(:last-child) .group__block {
+  border-bottom: 6px solid #7b7b7b;
+}
+.group--small {
+  height: 70px;
+}
+.group__block {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  color: #7b7b7b;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.group__block--left {
+  border-right: 3px solid #7b7b7b;
+  justify-content: flex-start;
+}
+.group__block--right {
+  border-left: 3px solid #7b7b7b;
+  justify-content: flex-end;
+}
+.group__block--future {
+  font-family: "SegmentAKeyTrial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 51px;
+  justify-content: center;
+}
+.group__block--now {
+  position: relative;
+  overflow: visible;
+}
+.group__now-text {
+  position: absolute;
+  z-index: 2;
+}
+.group__now-image {
+  height: 42px;
+  position: absolute;
+  left: -1px;
+  max-width: none;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=bot-section.component.css.map */

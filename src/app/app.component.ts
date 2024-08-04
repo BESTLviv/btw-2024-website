@@ -7,16 +7,16 @@ import {ScrollToTopComponent} from "./components/scroll-to-top/scroll-to-top.com
 import {StarBackgroundComponent} from "./components/star-background/star-background.component";
 import {HeroComponent} from "./components/hero/hero.component";
 import {Somec2Component} from "./components/somec2/somec2.component";
-import {CustomCursorComponent} from "./components/custom-cursor/custom-cursor.component";
 import {CursorTrailComponent} from "./components/cursor-trail/cursor-trail.component";
-import {MarqueeComponent} from "./components/marquee/marquee.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import {TeamSwiperComponent} from "./components/team-swiper/team-swiper.component";
 import {TestSwiperComponent} from "./components/test-swiper/test-swiper.component";
-import {PlanetComponent} from "./components/planet/planet.component";
 import {SpeakersSwiperComponent} from "./components/speakers-swiper/speakers-swiper.component";
-import {SpeakerComponent} from "./components/speaker/speaker.component";
 import {SpeakerCardComponent} from "./components/speaker-card/speaker-card.component";
+import {TimerComponent} from "./components/timer/timer.component";
+import {Marquee1Component} from "./components/marquee1/marquee1.component";
+import {Marquee2Component} from "./components/marquee2/marquee2.component";
+import {BotSectionComponent} from "./components/bot-section/bot-section.component";
 
 
 @Component({
@@ -30,16 +30,16 @@ import {SpeakerCardComponent} from "./components/speaker-card/speaker-card.compo
     StarBackgroundComponent,
     HeroComponent,
     Somec2Component,
-    CustomCursorComponent,
     CursorTrailComponent,
-    MarqueeComponent,
     FooterComponent,
     TeamSwiperComponent,
     TestSwiperComponent,
-    PlanetComponent,
     SpeakersSwiperComponent,
-    SpeakerComponent,
-    SpeakerCardComponent],
+    SpeakerCardComponent,
+    TimerComponent,
+    Marquee1Component,
+    Marquee2Component,
+    BotSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

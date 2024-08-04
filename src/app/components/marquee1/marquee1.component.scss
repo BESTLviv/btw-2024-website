@@ -1,0 +1,39 @@
+$gap: 80px;
+
+.marquee {
+  background-color: var(--color-white);
+  height: 50px;
+  display: flex;
+  overflow: hidden;
+  gap: $gap;
+  position: relative;
+  user-select: none;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  gap: $gap;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--color-black);
+
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - $gap));
+  }
+}
+
+.scroll {
+  animation: scroll 35s linear infinite;
+}

@@ -23,10 +23,9 @@
   font-style: normal;
 }
 
-//@font-face {
-//  font-family: 'Work Sans';
-//  src: url('/fonts/WorkSans-Italic-VariableFont_wght.ttf') format('truetype');
-//  font-weight: 100 900;
-//  font-style: italic;
-//}
-
+@font-face {
+  font-family: 'SegmentAKeyTrial';
+  src: url('/fonts/SegmentAKeyTrial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
