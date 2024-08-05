@@ -1,0 +1,30 @@
+
+.container1{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.speakers{
+  &__header{
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 51px;
+    color: var(--color-white);
+    //margin: 72px 0 97px 0;
+    text-align: center;
+  }
+  &__swiper{
+    padding: 0 0 200px 0;
+  }
+}
+
+.comet {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  width: 70vw;
+  object-fit: cover;
+  z-index: -1;
+}

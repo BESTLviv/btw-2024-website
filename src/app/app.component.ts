@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {HeaderComponent} from "./components/header/header.component";
 import {SomecComponent} from "./components/somec/somec.component";
@@ -17,6 +17,7 @@ import {TimerComponent} from "./components/timer/timer.component";
 import {Marquee1Component} from "./components/marquee1/marquee1.component";
 import {Marquee2Component} from "./components/marquee2/marquee2.component";
 import {BotSectionComponent} from "./components/bot-section/bot-section.component";
+import {SpeakersSectionComponent} from "./components/speakers-section/speakers-section.component";
 
 
 @Component({
@@ -39,7 +40,7 @@ import {BotSectionComponent} from "./components/bot-section/bot-section.componen
     TimerComponent,
     Marquee1Component,
     Marquee2Component,
-    BotSectionComponent],
+    BotSectionComponent, SpeakersSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

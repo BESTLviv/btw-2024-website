@@ -1,6 +1,5 @@
 .swiper-container-wrapper {
   position: relative;
-  padding: 30px 0 30px 0;
 }
 
 swiper-container {
@@ -15,7 +14,7 @@ swiper-container {
 
 swiper-slide {
   text-align: center;
-  padding: 0 0 30px 0;
+  padding: 0 0 40px 0;
   transition: all 0.3s ease;
   &:hover{
     opacity: 0.8;
@@ -28,17 +27,24 @@ swiper-container::part(button-next) {
 }
 
 swiper-container::part(pagination) {
-
 }
 
 swiper-container::part(bullet-active) {
   background-color: #6109D1;
+  cursor: none;
+  width: 13px;
+  height: 13px;
+  margin: -35px 13px 0 13px;
 }
 
 
 swiper-container::part(bullet) {
   background-color: var(--color-white);
+  margin: -35px 13px 0 13px;
+  width: 13px;
+  height: 13px;
   opacity: 1;
+  cursor: none;
 }
 
 

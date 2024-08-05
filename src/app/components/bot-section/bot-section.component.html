@@ -43,8 +43,15 @@
     <div class="content">
       <h3 class="content__header">НАШ БОТ</h3>
       <a [href]="'https://t.me/btw13_bot'" target="_blank">
-        <video class="content__planet" [autoplay]="true" [muted]="true" [loop]="true" #videoPlayer>
-          <source src="/bot-section/01.webm" type="video/webm">
+<!--        попробуй mp4 для телефонів-->
+        <video class="content__planet"
+               [autoplay]="true"
+               [muted]="true"
+               [loop]="true"
+               [preload]="true"
+               #videoPlayer
+               [src]="'/bot-section/01.webm'"
+               type="video/webm">
         </video>
       </a>
 
