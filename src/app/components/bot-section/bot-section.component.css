@@ -18,15 +18,6 @@
   margin: 43px 0 60px 0;
   text-align: center;
 }
-.content__planet {
-  display: block;
-  margin: auto;
-  max-width: 600px;
-}
-.content__planet:hover {
-  opacity: 0.8;
-}
-
 .about {
   margin: 85px 0 0 0;
   max-width: 800px;

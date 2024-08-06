@@ -1,0 +1,154 @@
+
+.container{
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 1167px;
+  padding-top: 140px;
+
+  &__date {
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    color: var(--color-white);
+    margin: 0;
+  }
+  &__title{
+    font-family: 'SegmentAKeyTrial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 379px;
+    color: var(--color-white);
+    margin: -150px 0 0 -7px;
+    padding: 0;
+    text-align: left;
+  }
+  &__plate{
+    width: 530px;
+    position: absolute;
+    //bottom: -53%;
+    bottom: -270px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+.timer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  &__left{
+    display: flex;
+    justify-content: left;
+  }
+  &__right {
+    display: flex;
+    justify-content: right;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-white);
+    border-radius: 5px;
+    width: 80px;
+    height: 78px;
+    &--right{
+      margin-left: 10px;
+    }
+    &--left{
+      margin-right: 10px;
+    }
+  }
+  &__value{
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 51px;
+    line-height: 40px;
+    color: var(--color-black);
+    margin: 5px 0 0 0;
+    padding: 0;
+    text-align: center;
+  }
+  &__label{
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    color: var(--color-black);
+    margin: 5px 0 0 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+
+.purple-background{
+  &__img{
+    position: absolute;
+    width: 100%;
+    //top: -300px;
+    top: 260px;
+    z-index: -999;
+    overflow: hidden;
+  }
+
+}
+
+
+  .about{
+    position: relative;
+    margin: 300px auto 156px;
+    //border: 1px solid red;
+    //background-color: #3A1972;
+    &__content{
+      margin: 0 auto;
+      max-width: 570px;
+      padding: 0 20px;
+    }
+    &__block{
+      margin: 20px auto;
+      padding: 44px 25px 44px 25px;
+      border-radius: 10px;
+      background-color: rgba(#6109D1, 0.45);
+    }
+    &__title{
+      font-family: 'Gilroy', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2.3rem;
+      color: var(--color-white);
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+    &__text{
+      font-family: 'Work Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--color-white);
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+    &__planet{
+      position: absolute;
+      &--1{
+        top: -22px;
+        left: 370px;
+        width: 12rem;
+        z-index: 100;
+      }
+    }
+  }

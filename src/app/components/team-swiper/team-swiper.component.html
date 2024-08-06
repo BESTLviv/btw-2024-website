@@ -1,28 +1,106 @@
-<swiper-container
-  effect="coverflow"
-  slide-to-clicked-slide="true"
-  allow-touch-move="false"
-  loop="true"
-  navigation="true"
-  slides-per-view="3"
-  speed="500">
-  <swiper-slide>
-    <img src="https://picsum.photos/200/300?random=1" alt="image1">
-  </swiper-slide>
-  <swiper-slide>
-    <img src="https://picsum.photos/200/300?random=2" alt="image2">
-  </swiper-slide>
-  <swiper-slide>
-    <img src="https://picsum.photos/200/300?random=3" alt="image3">
-  </swiper-slide>
-
-  <swiper-slide>
-    <img src="https://picsum.photos/200/300?random=4" alt="image4">
-  </swiper-slide>
-
-  <swiper-slide>
-    <img src="https://picsum.photos/200/300?random=5" alt="image5">
-  </swiper-slide>
 
 
-</swiper-container>
+
+
+<div class="swiper-container-wrapper">
+  <div class="swiper-container">
+    <swiper-container
+      #swiper2
+      effect="coverflow"
+      centered-slides="true"
+      space-between="45"
+      slides-per-view="3"
+      pagination="{clickable: true}"
+      navigation="false"
+      coverflow-effect-rotate="10"
+      coverflow-effect-stretch="0"
+      coverflow-effect-depth="130"
+      coverflow-effect-modifier="1"
+      coverflow-effect-slide-shadows="false"
+      initial-slide="1"
+
+
+    >
+      <swiper-slide>
+        <img src="/team-section/d.png" alt="member" class="slide-image">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/team-section/na.png" alt="member" class="slide-image">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="/team-section/s1.png" alt="member" class="slide-image">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/team-section/vv.png" alt="member" class="slide-image">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/team-section/ol.png" alt="member" class="slide-image">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/team-section/s2.png" alt="member" class="slide-image">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/team-section/oi.png" alt="member" class="slide-image">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="/team-section/an.png" alt="member" class="slide-image">
+      </swiper-slide>
+
+    </swiper-container>
+
+  </div>
+  <button class="custom-nav-button custom-prev-button" (click)="prevSlide()">
+    <img src="/speakers-section/left-arrow.svg" alt="Previous">
+  </button>
+  <button class="custom-nav-button custom-next-button" (click)="nextSlide()">
+    <img src="/speakers-section/right-arrow.svg" alt="Next">
+  </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<swiper-container-->
+<!--  effect="coverflow"-->
+<!--  slide-to-clicked-slide="true"-->
+<!--  allow-touch-move="false"-->
+<!--  loop="true"-->
+<!--  navigation="true"-->
+<!--  slides-per-view="3"-->
+<!--  speed="500">-->
+<!--  <swiper-slide>-->
+<!--    <img src="https://picsum.photos/200/300?random=1" alt="image1">-->
+<!--  </swiper-slide>-->
+<!--  <swiper-slide>-->
+<!--    <img src="https://picsum.photos/200/300?random=2" alt="image2">-->
+<!--  </swiper-slide>-->
+<!--  <swiper-slide>-->
+<!--    <img src="https://picsum.photos/200/300?random=3" alt="image3">-->
+<!--  </swiper-slide>-->
+
+<!--  <swiper-slide>-->
+<!--    <img src="https://picsum.photos/200/300?random=4" alt="image4">-->
+<!--  </swiper-slide>-->
+
+<!--  <swiper-slide>-->
+<!--    <img src="https://picsum.photos/200/300?random=5" alt="image5">-->
+<!--  </swiper-slide>-->
+
+
+<!--</swiper-container>-->

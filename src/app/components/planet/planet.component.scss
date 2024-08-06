@@ -1,0 +1,57 @@
+.planet {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 600px;
+  height: 600px;
+  &__ball{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+    width: 230px;
+  }
+
+  &__orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    width: 600px;
+    transform: translate(-50%, -50%);
+
+    &--1 {
+      animation: rotate1 12s linear infinite;
+    }
+    &--2 {
+      animation: rotate2 16s linear infinite reverse;
+    }
+    &--3 {
+      animation: rotate3 20s linear infinite;
+    }
+    &--4 {
+      animation: rotate4 24s linear infinite reverse;
+    }
+  }
+}
+
+@keyframes rotate1 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotate2 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotate3 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes rotate4 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}

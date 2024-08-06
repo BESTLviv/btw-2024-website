@@ -42,17 +42,8 @@
 
     <div class="content">
       <h3 class="content__header">НАШ БОТ</h3>
-      <a [href]="'https://t.me/btw13_bot'" target="_blank">
-<!--        попробуй mp4 для телефонів-->
-        <video class="content__planet"
-               [autoplay]="true"
-               [muted]="true"
-               [loop]="true"
-               [preload]="true"
-               #videoPlayer
-               [src]="'/bot-section/01.webm'"
-               type="video/webm">
-        </video>
+      <a [href]="'https://t.me/btw13_bot'" target="_blank" class="content__link">
+        <app-planet class="content__planet"></app-planet>
       </a>
 
       <div class="about">
@@ -60,7 +51,8 @@
           <div class="about__header">ЩО ВМІЄ ЦЕЙ БОТ?</div>
           <div class="about__description">
             Перегляд розкладу? Дізнатисяя саме в якій аудиторії лекція? Можливість долучитися до чату для крутого
-            спілкування? Знати всі апдейти? Можливість заповнити форму BEST Lviv?<br><br> Це все присутнє в нашому телеграм
+            спілкування? Знати всі апдейти? Можливість заповнити форму BEST Lviv?<br><br> Це все присутнє в нашому
+            телеграм
             боті BTW XIII !
           </div>
         </div>

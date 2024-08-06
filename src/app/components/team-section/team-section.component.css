@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  padding: 10px 0 0px 0;
+}
+
+.speakers {
+  position: relative;
+}
+.speakers__header {
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 51px;
+  color: var(--color-white);
+  text-align: center;
+}
+.speakers__swiper {
+  padding: 0 0 200px 0;
+}
+
+.bec {
+  position: absolute;
+  width: 930px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.forest {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: -2;
+}
+
+/*# sourceMappingURL=team-section.component.css.map */

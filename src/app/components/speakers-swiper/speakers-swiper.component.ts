@@ -1,8 +1,6 @@
 import {AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {SpeakerCardComponent} from "../speaker-card/speaker-card.component";
 import {SwiperContainer} from "swiper/element";
-import {Navigation, Pagination} from "swiper/types/modules";
-import Swiper from "swiper";
 
 
 @Component({

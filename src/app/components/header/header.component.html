@@ -7,8 +7,9 @@
       <nav [class.active]="isMenuOpen" #nav>
         <ul>
           <li><a [ngClass]="{'active': activeSection === 'hero'}" (click)="scrollTo('hero')">Про нас</a></li>
-          <li><a [ngClass]="{'active': activeSection === 'somec1'}" (click)="scrollTo('somec1')">Статистика</a></li>
+          <li><a [ngClass]="{'active': activeSection === 'somec1'}" (click)="scrollTo('somec1')">Спікери</a></li>
           <li><a [ngClass]="{'active': activeSection === 'somec2'}" (click)="scrollTo('somec2')">Організатори</a></li>
+          <li><a [ngClass]="{'active': activeSection === 'somec12'}" (click)="scrollTo('somec12')">Галерея</a></li>
         </ul>
       </nav>
       <div class="hamburger" (click)="toggleMenu()">

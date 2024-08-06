@@ -18,6 +18,9 @@ import {Marquee1Component} from "./components/marquee1/marquee1.component";
 import {Marquee2Component} from "./components/marquee2/marquee2.component";
 import {BotSectionComponent} from "./components/bot-section/bot-section.component";
 import {SpeakersSectionComponent} from "./components/speakers-section/speakers-section.component";
+import {HeroSectionComponent} from "./components/hero-section/hero-section.component";
+import {PlanetComponent} from "./components/planet/planet.component";
+import {TeamSectionComponent} from "./components/team-section/team-section.component";
 
 
 @Component({
@@ -40,7 +43,7 @@ import {SpeakersSectionComponent} from "./components/speakers-section/speakers-s
     TimerComponent,
     Marquee1Component,
     Marquee2Component,
-    BotSectionComponent, SpeakersSectionComponent],
+    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
