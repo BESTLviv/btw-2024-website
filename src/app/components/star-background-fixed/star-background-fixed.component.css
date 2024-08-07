@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: -999;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=star-background-fixed.component.css.map */

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {SpeakersSwiperComponent} from "../speakers-swiper/speakers-swiper.component";
-import {StarBackgroundComponent} from "../star-background/star-background.component";
 import {TeamSwiperComponent} from "../team-swiper/team-swiper.component";
 
 @Component({
@@ -8,7 +7,6 @@ import {TeamSwiperComponent} from "../team-swiper/team-swiper.component";
   standalone: true,
   imports: [
     SpeakersSwiperComponent,
-    StarBackgroundComponent,
     TeamSwiperComponent
   ],
   templateUrl: './team-section.component.html',

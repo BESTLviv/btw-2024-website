@@ -1,7 +1,10 @@
 
 .container{
   position: relative;
-  padding: 10px 0 0px 0 ;
+  padding: 1px 0 300px 0;
+  margin: 0;
+  inset: 0;
+  background: rgba(gray, 0.1);
 }
 
 .speakers{
@@ -15,7 +18,7 @@
     text-align: center;
   }
   &__swiper{
-    padding: 0 0 200px 0;
+    padding: 0 0 0 0;
   }
 }
 
@@ -26,12 +29,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 .forest{
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: -2;
 }

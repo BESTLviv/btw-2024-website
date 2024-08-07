@@ -19,10 +19,11 @@
 .comet {
   position: absolute;
   bottom: 30px;
-  right: 10px;
+  right: 0;
   width: 70vw;
   object-fit: cover;
   z-index: -1;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=speakers-section.component.css.map */
