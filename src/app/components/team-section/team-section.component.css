@@ -6,6 +6,11 @@
   background: rgba(128, 128, 128, 0.1);
 }
 
+.for-link {
+  position: absolute;
+  top: -70px;
+}
+
 .speakers {
   position: relative;
 }

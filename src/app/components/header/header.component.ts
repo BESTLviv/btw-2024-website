@@ -36,7 +36,7 @@ export class HeaderComponent {
   }
 
   checkActiveSection() {
-    const sections = ['hero', 'somec1', 'somec2'];
+    const sections = ['hero', 'speakers', 'organizers', 'gallery'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
