@@ -48,30 +48,9 @@ html {
 
 body {
   height: 100%;
-  background-color: green;
+  background-color: var(--color-black);
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-}
-@media (max-width: 576px) {
-  html {
-    font-size: 12px;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

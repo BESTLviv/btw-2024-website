@@ -14,7 +14,6 @@
 * {
   box-sizing: border-box;
   cursor: none !important;
-  //cursor: url("../public/rocket_cursor2.svg"), auto !important;
 }
 
 
@@ -24,37 +23,43 @@ html{
 
 body {
   height: 100%;
-  //background-color: var(--color-black);
-  background-color: green;
+  background-color: var(--color-black);
+  //background-color: green;
   margin: 0;
   padding: 0;
 }
 
 
 
-@media (max-width: 1200px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 576px) {
-  html {
-    font-size: 12px;
-  }
-}
+//@media (max-width: 1536px) {
+//  html {
+//    font-size: 15px;
+//  }
+//}
+//
+//@media (max-width: 1280px) {
+//  html {
+//    font-size: 14px;
+//  }
+//}
+//
+//@media (max-width: 1024px) {
+//  html {
+//    font-size: 13px;
+//  }
+//}
+//
+//@media (max-width: 768px) {
+//  html {
+//    font-size: 12px;
+//  }
+//}
+//
+//@media (max-width: 640px) {
+//  html {
+//    font-size: 11px;
+//  }
+//}
 
 
 

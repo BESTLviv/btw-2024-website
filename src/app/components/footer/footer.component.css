@@ -1,3 +1,49 @@
+.container {
+  height: 142px;
+  margin: 0 auto;
+  background: var(--color-black);
+  max-width: 100%;
+}
 
+.footer {
+  background: linear-gradient(to right, rgba(46, 20, 107, 0.87), rgba(6, 3, 24, 0.72));
+  padding: 0 56px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer___logo {
+  max-width: 150px;
+}
+.footer__logo-img {
+  width: 100%;
+  height: auto;
+}
+.footer__year {
+  width: 140px;
+  font-family: "Work Sans", sans-serif;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__social {
+  width: 3rem;
+  height: auto;
+  margin: 0 19px;
+}
+.footer__social :hover {
+  opacity: 0.8;
+}
+.footer__social-icon {
+  width: 100%;
+  height: auto;
+}
 
 /*# sourceMappingURL=footer.component.css.map */
