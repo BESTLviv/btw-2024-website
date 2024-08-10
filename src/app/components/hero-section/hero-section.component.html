@@ -1,77 +1,99 @@
 <div class="container" id="hero">
-<!--  <app-star-background></app-star-background>-->
   <div class="hero">
     <p class="hero__date">9-13.09.2024</p>
     <h1 class="hero__title">BEST TRAINING WEEK</h1>
-    <img src="/hero-section/plate01.png" alt="plate" class="hero__plate">
+    <div class="hero__title-box">
+    </div>
+
 
     <div class="timer">
-      <div class="timer__left">
-        <div class="timer__item timer__item--left">
-          <div class="timer__value">{{ days }}</div>
-          <div class="timer__label">days</div>
+      <div class="timer__wrapper">
+
+        <div class="timer__left">
+          <div class="timer__item timer__item--left">
+            <div class="timer__value">{{ days }}</div>
+            <div class="timer__label">days</div>
+          </div>
+          <div class="timer__item timer__item--left">
+            <div class="timer__value">{{ hours }}</div>
+            <div class="timer__label">hours</div>
+          </div>
         </div>
-        <div class="timer__item timer__item--left">
-          <div class="timer__value">{{ hours }}</div>
-          <div class="timer__label">hours</div>
+
+        <div class="timer__right">
+          <div class="timer__item timer__item--right">
+            <div class="timer__value">{{ minutes }}</div>
+            <div class="timer__label">minutes</div>
+          </div>
+          <div class="timer__item timer__item--right">
+            <div class="timer__value">{{ seconds }}</div>
+            <div class="timer__label">seconds</div>
+          </div>
         </div>
       </div>
 
-      <div class="timer__right">
-        <div class="timer__item timer__item--right">
-          <div class="timer__value">{{ minutes }}</div>
-          <div class="timer__label">minutes</div>
+      <img ngSrc="/hero-section/plate02.png" alt="plate" class="hero__plate">
+      <div class="purple-background">
+        <div class="purple-background__wrapper">
+          <img src="/hero-section/82.png" alt="background" class="purple-background__img">
+          <div class="purple-background__color"></div>
         </div>
-        <div class="timer__item timer__item--right">
-          <div class="timer__value">{{ seconds }}</div>
-          <div class="timer__label">seconds</div>
-        </div>
+
       </div>
     </div>
 
   </div>
 
-<!--  <img ngSrc="/hero-section/70.png" alt="background" class="purple-background__img"-->
-<!--        [width]="1920" [height]="4717">-->
-
-    <img src="/hero-section/70.png" alt="background" class="purple-background__img">
 
   <div class="about">
 
     <div class="about__content">
-      <div class="about__block">
-        <h3 class="about__title">ПРО ІВЕНТ</h3>
-        <div class="about__text">BEST Training Week — це п‘ять днів із неймовірними тренінгами, що розкривають
-          найцікавіші
-          теми у різних галузях. Учасники здобудуть не лише нові знання та навички, а також зможуть знайти друзів або
-          колег, які поділяють їхні інтереси
-          <br>
-          <br>
-          Під час BEST Training Week усі охочі матимуть чудову можливість насолодитись взаємодією з експертами та взяти
-          участь у захопливих обговореннях, що допоможе збагатити їхні знання.
+
+      <div class="about__wrapper">
+        <div class="about__card-box">
+          <div class="about__card about__card--1">
+            <div class="about__card-text about__card-text--infinity">∞</div>
+            <div class="about__card-text">вражень</div>
+          </div>
+          <div class="about__card about__card--2"><p class="about__card-text">~80<br> однодумців</p></div>
+        </div>
+
+        <div class="about__block">
+          <img src="/hero-section/c01.png" alt="planet" class="about__planet about__planet--1">
+          <h3 class="about__title">ПРО ІВЕНТ</h3>
+          <div class="about__text">
+            BTW (BEST Training Week) — це щорічний захід, де студенти мають можливість протягом тижня відвідати
+            безкоштовні тренінги, лекції та воркшопи.
+          </div>
         </div>
       </div>
-      <div class="about__block">
-        <h3 class="about__title">ЦІЛЬ</h3>
-        <div class="about__text">BEST Training Week — це п‘ять днів із неймовірними тренінгами, що розкривають
-          найцікавіші
-          теми у різних галузях. Учасники здобудуть не лише нові знання та навички, а також зможуть знайти друзів або
-          колег, які поділяють їхні інтереси
-          <br>
-          <br>
-          Під час BEST Training Week усі охочі матимуть чудову можливість насолодитись взаємодією з експертами та взяти
-          участь у захопливих обговореннях, що допоможе збагатити їхні знання.
+
+      <div class="about__wrapper">
+        <div class="about__card-box">
+          <div class="about__card about__card--3"><p class="about__card-text">6 лекцій</p></div>
+          <div class="about__card about__card--4"><p class="about__card-text">кахут для<br> учасників</p></div>
+        </div>
+
+        <div class="about__block">
+          <img src="/hero-section/c04.png" alt="planet" class="about__planet about__planet--4">
+          <h3 class="about__title">ЦІЛЬ</h3>
+          <div class="about__text">Наша ціль — надати студентам можливість розвиватися, розширювати знання, взаємодіяти
+            з експертами та брати участь в обговореннях
+          </div>
         </div>
       </div>
+
     </div>
-        <img src="/hero-section/moon011.png" alt="planet" class="about__planet about__planet--1">
-<!--        <img src="/hero-section/moon022.png" alt="planet" class="about__planet about__planet&#45;&#45;2">-->
-<!--        <img src="/hero-section/moon033.png" alt="planet" class="about__planet about__planet&#45;&#45;3">-->
-<!--        <img src="/hero-section/moon044.png" alt="planet" class="about__planet about__planet&#45;&#45;4">-->
+
+    <img src="/hero-section/c02.png" alt="planet" class="about__planet about__planet--2">
+    <img src="/hero-section/c03.png" alt="planet" class="about__planet about__planet--3">
+
 
   </div>
-
-
 </div>
+
+
+
+
 
 

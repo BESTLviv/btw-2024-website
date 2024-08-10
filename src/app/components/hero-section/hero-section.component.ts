@@ -16,10 +16,10 @@ import {NgOptimizedImage} from "@angular/common";
 export class HeroSectionComponent implements OnInit, OnDestroy {
   private targetDate: Date = new Date('2024-09-08T23:59:59');
 
-  days: number = 0;
-  hours: number = 0;
-  minutes: number = 0;
-  seconds: number = 0;
+  days: string = '13';
+  hours: string = '13';
+  minutes: string = '13';
+  seconds: string = '13';
 
   private subscription!: Subscription;
 
@@ -40,17 +40,25 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
     const difference = targetDate - now;
 
     if (difference > 0) {
-      this.days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      this.hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      this.minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      this.seconds = Math.floor((difference % (1000 * 60)) / 1000);
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      this.days = this.padZero(days);
+      this.hours = this.padZero(hours);
+      this.minutes = this.padZero(minutes);
+      this.seconds = this.padZero(seconds);
     } else {
-      this.days = 0;
-      this.hours = 0;
-      this.minutes = 0;
-      this.seconds = 0;
+      this.days = '00';
+      this.hours = '00';
+      this.minutes = '00';
+      this.seconds = '00';
       this.subscription.unsubscribe();
     }
   }
-}
 
+  private padZero(num: number): string {
+    return num < 10 ? `0${num}` : `${num}`;
+  }
+}

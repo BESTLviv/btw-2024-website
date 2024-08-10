@@ -8,6 +8,7 @@ $gap: 60px;
   gap: $gap;
   position: relative;
   user-select: none;
+  z-index: 10;
 }
 
 .marquee-content {

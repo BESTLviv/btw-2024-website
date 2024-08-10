@@ -6,6 +6,7 @@
   gap: 60px;
   position: relative;
   user-select: none;
+  z-index: 10;
 }
 
 .marquee-content {
