@@ -5,7 +5,6 @@ import {SomecComponent} from "./components/somec/somec.component";
 import {ScrollProgressComponent} from "./components/scroll-progress/scroll-progress.component";
 import {ScrollToTopComponent} from "./components/scroll-to-top/scroll-to-top.component";
 import {StarBackgroundComponent} from "./components/star-background/star-background.component";
-import {HeroComponent} from "./components/hero/hero.component";
 import {Somec2Component} from "./components/somec2/somec2.component";
 import {CursorTrailComponent} from "./components/cursor-trail/cursor-trail.component";
 import {FooterComponent} from "./components/footer/footer.component";
@@ -34,7 +33,6 @@ import {PhotosSectionComponent} from "./components/photos-section/photos-section
     ScrollProgressComponent,
     ScrollToTopComponent,
     StarBackgroundComponent,
-    HeroComponent,
     Somec2Component,
     CursorTrailComponent,
     FooterComponent,
