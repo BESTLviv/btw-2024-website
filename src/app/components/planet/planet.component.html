@@ -1,16 +1,17 @@
 <div class="planet">
-  <img src="/bot-section/c1.png" alt="orbit" class="planet__orbit planet__orbit--1">
-  <img src="/bot-section/c2.png" alt="orbit" class="planet__orbit planet__orbit--2">
-  <img src="/bot-section/c3.png" alt="orbit" class="planet__orbit planet__orbit--3">
-  <img src="/bot-section/c4.png" alt="orbit" class="planet__orbit planet__orbit--4">
+  <img src="/bot-section/c1.png" alt="orbit" class="planet__orbit planet__orbit--1" loading="lazy">
+  <img src="/bot-section/c2.png" alt="orbit" class="planet__orbit planet__orbit--2" loading="lazy">
+  <img src="/bot-section/c3.png" alt="orbit" class="planet__orbit planet__orbit--3" loading="lazy">
+  <img src="/bot-section/c4.png" alt="orbit" class="planet__orbit planet__orbit--4" loading="lazy">
   <a [href]="'https://t.me/btw13_bot'" target="_blank" class="planet__link">
     <video class="planet__ball"
            [autoplay]="true"
            [muted]="true"
            [loop]="true"
-           [preload]="true"
+           [preload]="'none'"
            [src]="'/bot-section/02.webm'"
            [playbackRate]="3.5"
+           loading="lazy"
            type="video/webm">
     </video>
   </a>
