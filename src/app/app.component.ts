@@ -22,6 +22,7 @@ import {PlanetComponent} from "./components/planet/planet.component";
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
 import {StarBackgroundFixedComponent} from "./components/star-background-fixed/star-background-fixed.component";
 import {PhotosSectionComponent} from "./components/photos-section/photos-section.component";
+import {OrganizationSectionComponent} from "./components/organization-section/organization-section.component";
 
 
 @Component({
@@ -43,7 +44,7 @@ import {PhotosSectionComponent} from "./components/photos-section/photos-section
     TimerComponent,
     Marquee1Component,
     Marquee2Component,
-    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent],
+    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent, OrganizationSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

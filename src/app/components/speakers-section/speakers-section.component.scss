@@ -1,37 +1,80 @@
 
 
-.container{
+
+
+
+.container {
   position: relative;
   margin: 0;
-  padding: 1px 0 0 0 ;
+  padding: 1px 0 0 0;
 }
 
-.for-link{
+.for-link {
   position: absolute;
   top: -70px;
 }
 
-.speakers{
-  &__header{
+.speakers {
+  &__header {
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 51px;
     color: var(--color-white);
-    //margin: 72px 0 97px 0;
     text-align: center;
   }
-  &__swiper{
+  &__swiper {
     padding: 0 0 200px 0;
   }
 }
 
-.comet {
-  position: absolute;
-  bottom: 30px;
-  right: 0;
-  width: 70vw;
-  object-fit: cover;
-  z-index: -1;
-  overflow: hidden;
+/* Додаємо розмиття лише для цього блоку */
+.blurred-content {
+  filter: blur(10px);
 }
+
+/* Текст COMING SOON по центру */
+.coming-soon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Gilroy', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--color-white);
+  text-align: center;
+  z-index: 100; /* Зробимо текст поверх інших елементів */
+  pointer-events: none; /* Щоб текст не перекривав інші елементи */
+  -webkit-text-stroke: 1px black;
+}
+
+
+
+
+//.container{
+//  position: relative;
+//  margin: 0;
+//  padding: 1px 0 0 0 ;
+//
+//}
+//
+//.for-link{
+//  position: absolute;
+//  top: -70px;
+//}
+//
+//.speakers{
+//  &__header{
+//    font-family: 'Gilroy', sans-serif;
+//    font-style: normal;
+//    font-weight: 900;
+//    font-size: 51px;
+//    color: var(--color-white);
+//    //margin: 72px 0 97px 0;
+//    text-align: center;
+//  }
+//  &__swiper{
+//    padding: 0 0 200px 0;
+//  }
+//}
