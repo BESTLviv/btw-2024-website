@@ -23,6 +23,7 @@ import {TeamSectionComponent} from "./components/team-section/team-section.compo
 import {StarBackgroundFixedComponent} from "./components/star-background-fixed/star-background-fixed.component";
 import {PhotosSectionComponent} from "./components/photos-section/photos-section.component";
 import {OrganizationSectionComponent} from "./components/organization-section/organization-section.component";
+import {ScrollImageComponent} from "./components/scroll-image/scroll-image.component";
 
 
 @Component({
@@ -44,7 +45,7 @@ import {OrganizationSectionComponent} from "./components/organization-section/or
     TimerComponent,
     Marquee1Component,
     Marquee2Component,
-    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent, OrganizationSectionComponent],
+    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent, OrganizationSectionComponent, ScrollImageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

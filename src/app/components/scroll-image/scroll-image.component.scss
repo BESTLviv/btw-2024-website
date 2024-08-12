@@ -1,0 +1,12 @@
+.scroll-container {
+  height: 100px; // Встановіть бажану висоту
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-image {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: left 0.1s linear;
+}

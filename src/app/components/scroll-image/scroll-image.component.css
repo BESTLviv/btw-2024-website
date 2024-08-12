@@ -1,0 +1,14 @@
+.scroll-container {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-image {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  transition: left 0.1s linear;
+}
+
+/*# sourceMappingURL=scroll-image.component.css.map */
