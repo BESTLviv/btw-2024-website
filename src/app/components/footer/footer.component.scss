@@ -1,50 +1,76 @@
-.container{
-  height: 142px;
-  margin: 0 auto;
-  background: var(--color-black);
-  max-width: 100%;
+@function adaptive-size($pcSize, $mobSize, $maxWidth: 1536, $minWidth: 390) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthCalc: $maxWidth - $minWidth;
+
+  $min: min($pcSize, $mobSize);
+  $max: max($pcSize, $mobSize);
+
+  @return calc(clamp(#{$min + px},
+  #{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthCalc}),
+  #{$max + px}));
 }
 
-.footer{
+
+.container {
+  height: adaptive-size(142, 87);
+  background: var(--color-black);
+  max-width: 100%;
+
+}
+
+
+.footer {
+  height: 100%;
   background: linear-gradient(
       to right,
       rgba(46, 20, 107, 0.87),
       rgba(6, 3, 24, 0.72)
   );
-  padding: 0 56px;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &___logo{
-    max-width: 150px;
-  }
-  &__logo-img{
-    width: 100%;
-    height: auto;
-  }
-  &__year{
-    width: 140px;
-    font-family: "Work Sans", sans-serif;
-    text-align: right;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-white);
-  }
-  &__socials{
+
+  &__wrapper {
+    padding: 0 25px;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1400px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &__social{
-    width: 3rem;
+
+  &__logo {
+    width: adaptive-size(148, 91);
+  }
+
+  &__logo-img {
+    width: 100%;
     height: auto;
-    margin: 0 19px;
-    :hover{
+  }
+
+  &__year {
+    font-family: "Work Sans", sans-serif;
+    text-align: right;
+    font-size: adaptive-size(32, 20);
+    font-weight: 700;
+    color: var(--color-white);
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: adaptive-size(38, 17);
+  }
+
+  &__social {
+    width: adaptive-size(46, 20);
+    height: auto;
+
+    :hover {
       opacity: 0.8;
     }
   }
-  &__social-icon{
+
+  &__social-icon {
     width: 100%;
     height: auto;
   }
