@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   padding-top: clamp(57px, 57px + 63 * (100vw - 390px) / 810, 120px);
   padding-bottom: clamp(72px, 72px + 106 * (100vw - 390px) / 810, 178px);
   background: #3A1972 url("/organization-section/gridbg.png") left center/cover no-repeat;

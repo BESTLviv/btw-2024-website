@@ -19,7 +19,21 @@ export class TeamSwiperComponent  implements AfterViewInit {
 
   ngAfterViewInit() {
     const swiperParams = {
-
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+        768: {
+          slidesPerView: 1,
+        },
+        640: {
+          slidesPerView: 1,
+        },
+        0: {
+          slidesPerView: 1
+        },
+      },
     };
 
     Object.assign(this.swiperEl.nativeElement, swiperParams);

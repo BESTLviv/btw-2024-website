@@ -8,55 +8,57 @@
       #swiper2
       effect="coverflow"
       centered-slides="true"
-      space-between="45"
+      space-between="35"
       slides-per-view="3"
       pagination="{clickable: true}"
       navigation="false"
-      coverflow-effect-rotate="10"
+      coverflow-effect-rotate="0"
       coverflow-effect-stretch="0"
-      coverflow-effect-depth="130"
+      coverflow-effect-depth="40"
       coverflow-effect-modifier="1"
+      coverflow-effect-scale="0.92"
       coverflow-effect-slide-shadows="false"
       initial-slide="1"
 
 
+
     >
       <swiper-slide>
-        <img loading="lazy" src="/team-section/d.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/d.png" alt="member" class="slide-img">
       </swiper-slide>
 
       <swiper-slide>
-        <img loading="lazy" src="/team-section/na.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/na.png" alt="member" class="slide-img">
       </swiper-slide>
 
       <swiper-slide>
-        <img loading="lazy" src="/team-section/s1.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/s1.png" alt="member" class="slide-img">
       </swiper-slide>
       <swiper-slide>
-        <img loading="lazy" src="/team-section/vv.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/vv.png" alt="member" class="slide-img">
       </swiper-slide>
       <swiper-slide>
-        <img loading="lazy" src="/team-section/ol.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/ol.png" alt="member" class="slide-img">
       </swiper-slide>
       <swiper-slide>
-        <img loading="lazy" src="/team-section/s2.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/s2.png" alt="member" class="slide-img">
       </swiper-slide>
       <swiper-slide>
-        <img loading="lazy" src="/team-section/oi.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/o.png" alt="member" class="slide-img">
       </swiper-slide>
       <swiper-slide>
-        <img loading="lazy" src="/team-section/an.png" alt="member" class="slide-image">
+        <img loading="lazy" src="/team-section/an.png" alt="member" class="slide-img">
       </swiper-slide>
 
     </swiper-container>
-
+    <button class="custom-nav-button custom-prev-button" (click)="prevSlide()">
+      <img loading="lazy" src="/speakers-section/left-arrow.svg" alt="Previous">
+    </button>
+    <button class="custom-nav-button custom-next-button" (click)="nextSlide()">
+      <img loading="lazy" src="/speakers-section/right-arrow.svg" alt="Next">
+    </button>
   </div>
-  <button class="custom-nav-button custom-prev-button" (click)="prevSlide()">
-    <img loading="lazy" src="/speakers-section/left-arrow.svg" alt="Previous">
-  </button>
-  <button class="custom-nav-button custom-next-button" (click)="nextSlide()">
-    <img loading="lazy" src="/speakers-section/right-arrow.svg" alt="Next">
-  </button>
+
 
 </div>
 

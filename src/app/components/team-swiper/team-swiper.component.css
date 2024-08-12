@@ -1,5 +1,7 @@
+@charset "UTF-8";
 .swiper-container-wrapper {
   position: relative;
+  padding: 0 clamp(21px, 21px + 7 * (100vw - 390px) / 1146, 28px);
 }
 
 swiper-container {
@@ -8,16 +10,48 @@ swiper-container {
 }
 
 .swiper-container {
-  padding: 0 200px;
+  position: relative;
+  padding: 0 clamp(21px, 21px + 29 * (100vw - 390px) / 1146, 50px);
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 swiper-slide {
   text-align: center;
+  width: 100%;
   padding: 0 0 40px 0;
+  filter: blur(3px);
+  position: relative;
+}
+swiper-slide::before {
+  border-radius: 24px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 43px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
-.slide-image {
-  max-width: 400px;
+swiper-slide.swiper-slide-active {
+  box-shadow: none;
+  filter: blur(0);
+}
+swiper-slide.swiper-slide-active::before {
+  opacity: 0;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  filter: blur(3px);
+  /* або */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide-img {
   width: 100%;
 }
 
@@ -26,21 +60,21 @@ swiper-container::part(button-next) {
   display: none;
 }
 
-swiper-container::part(bullet-active) {
-  background-color: #6109D1;
-  cursor: none;
-  width: 13px;
-  height: 13px;
-  margin: -35px 13px 0 13px;
-}
-
 swiper-container::part(bullet) {
   background-color: var(--color-white);
-  margin: -35px 13px 0 13px;
-  width: 13px;
-  height: 13px;
+  margin: -35px clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px) 0 clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
+  width: clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
+  height: clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
   opacity: 1;
   cursor: none;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: #6109D1;
+  margin: -35px clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px) 0 clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
+  cursor: none;
+  width: clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
+  height: clamp(7px, 7px + 6 * (100vw - 390px) / 1146, 13px);
 }
 
 .custom-nav-button {
@@ -51,7 +85,7 @@ swiper-container::part(bullet) {
   background: none;
   z-index: 10;
   padding: 0;
-  width: 77px;
+  width: clamp(29px, 29px + 38 * (100vw - 390px) / 1146, 67px);
   transition: all 0.3s ease;
 }
 .custom-nav-button img {
@@ -68,11 +102,17 @@ swiper-container::part(bullet) {
 }
 
 .custom-prev-button {
-  left: 77px;
+  left: 0;
 }
 
 .custom-next-button {
-  right: 77px;
+  right: 0;
+}
+
+@media (max-width: 1024px) {
+  .swiper-container {
+    padding: 0 clamp(50px, 50px + 50 * (100vw - 390px) / 634, 100px);
+  }
 }
 
 /*# sourceMappingURL=team-swiper.component.css.map */

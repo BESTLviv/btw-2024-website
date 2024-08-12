@@ -1,19 +1,31 @@
+@function adaptive-size($pcSize, $mobSize, $maxWidth: 1536, $minWidth: 390) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthCalc: $maxWidth - $minWidth;
+
+  $min: min($pcSize, $mobSize);
+  $max: max($pcSize, $mobSize);
+
+  @return calc(clamp(#{$min + px},
+  #{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthCalc}),
+  #{$max + px}));
+}
+
 
 .container{
   position: relative;
-  padding: 1px 0 300px 0;
+  padding: 1px 0 adaptive-size(300, 100) 0;
   margin: 0;
   inset: 0;
   background: rgba(gray, 0.1);
 }
 
-.speakers{
+.team{
   position: relative;
   &__header{
     font-family: 'Gilroy', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 51px;
+    font-size: adaptive-size(51, 28);
     color: var(--color-white);
     text-align: center;
   }

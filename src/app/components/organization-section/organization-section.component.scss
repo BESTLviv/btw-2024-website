@@ -12,6 +12,7 @@
 
 
 .container {
+  position: relative;
   padding-top: adaptive-size(120, 57);
   padding-bottom: adaptive-size(178, 72);
   background: #3A1972 url("/organization-section/gridbg.png") left (center/ cover) no-repeat;
