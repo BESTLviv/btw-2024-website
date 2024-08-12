@@ -131,7 +131,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-black);
+  background-color: black;
 }
 .organizers__i-love-best-lviv-logo img {
   width: 100%;

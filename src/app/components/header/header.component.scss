@@ -12,12 +12,12 @@ header {
   &.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
+    box-shadow: 0 0 10px rgba(97, 9, 209, 0.5);
   }
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1400px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -29,7 +29,7 @@ header {
 }
 
 .logo img {
-  width: 160px;
+  height: 51px;
 }
 
 nav {
@@ -49,9 +49,10 @@ nav {
         cursor: pointer;
 
         &:hover, &.active {
-          color: #a020f0;
+          color: var(--color-light-purple);
           text-shadow: 0 0 10px rgba(160, 32, 240, 0.7);
         }
+
       }
     }
   }
