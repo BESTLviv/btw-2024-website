@@ -1,7 +1,7 @@
 .container {
   position: relative;
   background-color: var(--color-black);
-  padding: 1px 0 19rem 0;
+  padding: clamp(57px, 57px + 63 * (100vw - 390px) / 810, 120px) 0 clamp(116px, 116px + 190 * (100vw - 390px) / 810, 306px) 0;
 }
 
 .for-link {
@@ -13,9 +13,16 @@
   font-family: "Gilroy", sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 51px;
+  font-size: clamp(28px, 28px + 23 * (100vw - 390px) / 810, 51px);
   color: var(--color-white);
+  line-height: 1;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+  margin: clamp(36px, 36px + 47 * (100vw - 390px) / 810, 83px) 0 0 0;
 }
 
 swiper-slide {
