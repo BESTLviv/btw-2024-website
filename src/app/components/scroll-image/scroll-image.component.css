@@ -1,14 +1,19 @@
-.scroll-container {
-  height: 100px;
-  overflow: hidden;
+@charset "UTF-8";
+.container {
+  width: 100%;
+  height: 30px; /* Задайте висоту на ваш розсуд */
   position: relative;
+  background-color: #f0f0f0;
 }
 
-.scroll-image {
-  height: 100%;
+.moving-div {
+  width: 20px;
+  height: 30px;
   position: absolute;
-  left: 0;
-  transition: left 0.1s linear;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  transition: left 0.1s ease-out;
 }
 
 /*# sourceMappingURL=scroll-image.component.css.map */

@@ -1,38 +1,56 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener, ElementRef} from '@angular/core';
+import {NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-scroll-image',
   standalone: true,
-  imports: [],
+  imports: [
+    NgStyle
+  ],
   templateUrl: './scroll-image.component.html',
   styleUrl: './scroll-image.component.scss'
 })
-export class ScrollImageComponent implements OnInit, OnDestroy {
-  private scrollPosition = 0;
-  private readonly scrollSpeed = 0.5; // Швидкість руху зображення
+export class ScrollImageComponent implements OnInit {
+  position = 0; // Початкова позиція в процентах (0% - лівий край, 100% - правий край)
+  private containerOffsetTop = 0;
+  private containerHeight = 0;
+
+  constructor(private el: ElementRef) {}
+
+  ngOnInit() {
+    this.updateContainerDimensions();
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll() {
-    const newScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollDelta = newScrollPosition - this.scrollPosition;
-    this.updateImagePosition(scrollDelta);
-    this.scrollPosition = newScrollPosition;
+    this.updatePosition();
   }
 
-  ngOnInit() {
-    this.scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.updateContainerDimensions();
   }
 
-  ngOnDestroy() {
-
+  updateContainerDimensions() {
+    const container = this.el.nativeElement.querySelector('.container');
+    this.containerOffsetTop = container.offsetTop;
+    this.containerHeight = container.offsetHeight;
   }
 
-  private updateImagePosition(scrollDelta: number) {
-    const image = document.querySelector('.scroll-image') as HTMLElement;
-    if (image) {
-      const currentLeft = parseFloat(image.style.left) || 0;
-      const newLeft = currentLeft - scrollDelta * this.scrollSpeed;
-      image.style.left = `${newLeft}px`;
+  updatePosition() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const windowHeight = window.innerHeight;
+
+    const startScroll = this.containerOffsetTop - windowHeight;
+    const endScroll = this.containerOffsetTop + this.containerHeight;
+
+    if (scrollTop >= startScroll && scrollTop <= endScroll) {
+      const progress = (scrollTop - startScroll) / (endScroll - startScroll);
+      this.position = progress * 100;
+    } else if (scrollTop > endScroll) {
+      this.position = 100;
+    } else {
+      this.position = 0;
     }
   }
 }

@@ -24,11 +24,7 @@ export class CursorTrailComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private ngZone: NgZone) { }
 
   ngOnInit(): void {
-    if ('ontouchstart' in window) {
-      // window.addEventListener('touchmove', this.handleTouchMove.bind(this), { passive: true });
-      window.addEventListener('touchstart', this.handleTouchStart.bind(this), { passive: true });
-      window.addEventListener('touchend', this.handleTouchEnd.bind(this), { passive: true });
-    } else {
+    if (!('ontouchstart' in window)) {
       window.addEventListener('mousemove', this.handleMouseMove.bind(this));
     }
   }
