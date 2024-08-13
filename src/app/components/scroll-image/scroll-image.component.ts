@@ -8,7 +8,6 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
   styleUrl: './scroll-image.component.scss'
 })
 export class ScrollImageComponent implements OnInit, OnDestroy {
-  imageSrc = 'path/to/your/image.jpg';
   private scrollPosition = 0;
   private readonly scrollSpeed = 0.5; // Швидкість руху зображення
 
@@ -25,7 +24,7 @@ export class ScrollImageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // Очистка, якщо потрібно
+
   }
 
   private updateImagePosition(scrollDelta: number) {
