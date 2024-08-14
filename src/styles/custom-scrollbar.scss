@@ -1,55 +1,5 @@
 // спробуй Perfect Scrollbar
 
-
-// Стилі для Webkit браузерів (Chrome, Safari, новіші версії Edge)
-//::-webkit-scrollbar {
-//  width: 15px;
-//}
-//
-//::-webkit-scrollbar-track {
-//  background:
-//    linear-gradient(90deg, #000, #000 1px, #111 0, #111 5px) 0 0,
-//    linear-gradient(90deg, #222, #222 1px, #111 0, #111 5px) 0 100%;
-//  background-repeat: no-repeat;
-//  background-size: 100% 5px;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//  background: linear-gradient(45deg,
-//    #ff00ff, #00ffff, #ff00ff, #00ffff, #ff00ff);
-//  background-size: 200% 200%;
-//  animation: gradient 5s ease infinite;
-//  border-radius: 10px;
-//  border: 2px solid #000;
-//}
-//
-//::-webkit-scrollbar-thumb {
-//  background: linear-gradient(45deg, #ff00ff, #00ffff);
-//  border-radius: 10px;
-//  box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
-//}
-//
-//::-webkit-scrollbar-thumb:hover {
-//  background: linear-gradient(45deg,
-//    #00ffff, #ff00ff, #00ffff, #ff00ff, #00ffff);
-//  background-size: 200% 200%;
-//  animation: gradient 5s ease infinite;
-//}
-//
-//// Анімація для градієнта
-//@keyframes gradient {
-//  0% {
-//    background-position: 0 50%;
-//  }
-//  50% {
-//    background-position: 100% 50%;
-//  }
-//  100% {
-//    background-position: 0 50%;
-//  }
-//}
-
- //Стилі для Firefox
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-light-purple) var(--color-gray);

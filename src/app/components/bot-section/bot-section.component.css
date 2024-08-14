@@ -60,9 +60,8 @@
   justify-content: flex-end;
 }
 .group__block--future {
-  font-family: "SegmentAKeyTrial", sans-serif;
+  font-family: "Segment A Key Trial Bold", sans-serif;
   font-style: normal;
-  font-weight: 700;
   font-size: clamp(22px, 22px + 29 * (100vw - 390px) / 1146, 51px);
   justify-content: center;
 }

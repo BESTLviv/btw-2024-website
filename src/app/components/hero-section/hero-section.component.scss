@@ -5,7 +5,6 @@
   $maxWidthCalc: $maxWidth - $minWidth;
 
   $min: min($pcSize, $mobSize);
-  //$min: -99999;
   $max: max($pcSize, $mobSize);
 
   @return calc(clamp(#{$min + px},
@@ -39,9 +38,8 @@
 
   &__title {
     position: relative;
-    font-family: 'SegmentAKeyTrial', sans-serif;
+    font-family: 'Segment A Key Trial Bold', sans-serif;
     font-style: normal;
-    font-weight: 400;
     font-size: adaptive-size(379, 150);
     color: var(--color-white);
     margin: 0 0 0 -3px;
