@@ -4,6 +4,7 @@
   margin: 0;
   inset: 0;
   background: rgba(128, 128, 128, 0.1);
+  overflow: hidden;
 }
 
 .team {
@@ -22,9 +23,10 @@
 }
 
 .bec {
+  margin: 0 auto;
   position: absolute;
-  width: 930px;
-  top: 50%;
+  width: clamp(500px, 500px + 430 * (100vw - 390px) / 1146, 930px);
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: cover;
