@@ -42,7 +42,7 @@ swiper-slide {
 
 
   &::before {
-    border-radius: 24px;
+    border-radius: adaptive-size(43, 10, 1024, 320);
     content: '';
     position: absolute;
     top: 0;
@@ -150,10 +150,14 @@ swiper-container::part(bullet-active) {
     padding: 0 adaptive-size(100, 50, 1024, 390);
 
   }
+}
 
-
+@media (min-width: 1024px) {
   swiper-slide {
-  }
+    &::before {
+      border-radius: adaptive-size(15, 24, 1024, 1536);
+    }
 
+  }
 }
 
