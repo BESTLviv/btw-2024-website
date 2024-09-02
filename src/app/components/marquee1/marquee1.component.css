@@ -1,9 +1,9 @@
 .marquee {
   background-color: var(--color-white);
-  height: 50px;
+  height: clamp(25px, 25px + 25 * (100vw - 320px) / 1216, 50px);
   display: flex;
   overflow: hidden;
-  gap: 80px;
+  gap: clamp(30px, 30px + 40 * (100vw - 320px) / 1216, 70px);
   position: relative;
   user-select: none;
   z-index: 10;
@@ -15,9 +15,9 @@
   justify-content: space-around;
   align-items: center;
   min-width: 100%;
-  gap: 80px;
+  gap: clamp(30px, 30px + 40 * (100vw - 320px) / 1216, 70px);
   font-family: "Gilroy", sans-serif;
-  font-size: 19px;
+  font-size: clamp(8px, 8px + 11 * (100vw - 320px) / 1216, 19px);
   font-weight: 900;
   font-style: normal;
   color: var(--color-black);
@@ -28,7 +28,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - 80px));
+    transform: translateX(calc(-100% - clamp(30px, 30px + 40 * (100vw - 320px) / 1216, 70px)));
   }
 }
 .scroll {
