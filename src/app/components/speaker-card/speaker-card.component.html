@@ -1,37 +1,42 @@
 
-  <div class="flip-card" (click)="flipCard()" [class.flipped]="isFlipped">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <div class="speaker-card">
-          <div class="speaker-card__img">
-            <img [src]="imageUrl" alt="{{ name }}" loading="lazy">
-          </div>
-          <div class="speaker-card__content">
+<div class="flip-card" (click)="flipCard()" [class.flipped]="isFlipped">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <div class="speaker-card">
+
+        <img [src]="imageUrl" alt="{{ name }}" loading="lazy" class="speaker-card__img">
+
+        <div class="speaker-card__content">
+          <div class="speaker-card__name-position-wrapper">
             <h2 class="speaker-card__name">{{ name }}</h2>
             <p class="speaker-card__position">{{ position }}</p>
-            <p class="speaker-card__description">{{ description }}</p>
-            <div class="speaker-card__socials">
-              <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social">
-                <img ngSrc="/speakers-section/instagram.svg" height="25" width="25" alt="Instagram"
-                     class="speaker-card__social-icon">
-              </a>
-              <a *ngIf="telegramUrl" [href]="telegramUrl" class="speaker-card__social">
-                <img ngSrc="/speakers-section/telegram.svg" height="25" width="25" alt="Telegram"
-                     class="speaker-card__social-icon">
-              </a>
-              <a *ngIf="linkedinUrl" [href]="linkedinUrl" class="speaker-card__social">
-                <img ngSrc="/speakers-section/linkedin.svg" height="25" width="25" alt="LinkedIn"
-                     class="speaker-card__social-icon">
-              </a>
-            </div>
           </div>
-        </div>
-      </div>
-      <div class="flip-card-back">
-        <div class="speaker-lecture">
-          <p class="speaker-lecture__text">{{ lectureTitle }}</p>
+          <p class="speaker-card__description">{{ description }}</p>
+          <p class="speaker-card__more"><span>Дізнатися більше</span> ⏶</p>
+
+          <div class="speaker-card__socials">
+            <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social" (click)="$event.stopPropagation()">
+              <img src="/speakers-section/instagram.svg" alt="Instagram"
+                   class="speaker-card__social-icon">
+            </a>
+            <a *ngIf="telegramUrl" [href]="telegramUrl" class="speaker-card__social" (click)="$event.stopPropagation()">
+              <img src="/speakers-section/telegram.svg" alt="Telegram"
+                   class="speaker-card__social-icon">
+            </a>
+            <a *ngIf="linkedinUrl" [href]="linkedinUrl" class="speaker-card__social" (click)="$event.stopPropagation()">
+              <img src="/speakers-section/linkedin.svg" alt="LinkedIn"
+                   class="speaker-card__social-icon">
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <div class="flip-card-back">
+      <div class="speaker-lecture">
+        <p class="speaker-lecture__text">{{ lectureTitle }}</p>
+        <p class="speaker-lecture__description">{{ description }}</p>
+      </div>
+    </div>
   </div>
+</div>
 

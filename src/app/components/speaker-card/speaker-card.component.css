@@ -1,9 +1,9 @@
 .flip-card {
-  display: inline-block;
+  border: 1px solid red;
+  position: relative;
   background-color: transparent;
   width: 100%;
-  max-width: 570px;
-  height: 306px;
+  height: 332px;
   perspective: 1000px;
 }
 .flip-card.flipped .flip-card-inner {
@@ -14,7 +14,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -31,101 +30,172 @@
 }
 
 .speaker-card {
+  border-radius: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
+  padding: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
   background-color: var(--color-white);
-  width: 100%;
   height: 100%;
-  border-radius: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .speaker-card__img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0 15px 20px;
-  flex: 1;
-  overflow: hidden;
-}
-.speaker-card__img img {
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
+  border-radius: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px) 0 0 clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
+  width: 40%;
+  height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 .speaker-card__content {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin: 15px 20px 15px 60px;
+  margin: 0 0 0 clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
 }
 .speaker-card__name {
   font-family: "Gilroy", sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 27px;
+  font-size: 32px;
   color: var(--color-black);
   margin: 0;
   text-align: start;
 }
 .speaker-card__position {
-  font-family: "Work Sans", sans-serif;
-  font-weight: 400;
+  font-family: "Gilroy", sans-serif;
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--color-black);
   margin: 0;
   text-align: start;
+  line-height: 1.5;
 }
 .speaker-card__description {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 15px;
+  font-size: 16px;
   margin: 0;
   color: var(--color-black);
   text-align: start;
 }
+.speaker-card__more {
+  display: none;
+}
 .speaker-card__socials {
   display: flex;
   justify-content: start;
-  flex-direction: row;
+  gap: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
 }
 .speaker-card__social {
-  margin-right: 16px;
-  width: 25px;
+  width: auto;
   height: 25px;
 }
-.speaker-card__social-icon {
-  width: 20px;
-  height: 20px;
-}
-.speaker-card__social-icon:hover {
-  scale: 1.1;
+.speaker-card__social:hover {
+  scale: 1.05;
   opacity: 0.6;
+}
+.speaker-card__social-icon {
+  width: 100%;
+  height: 100%;
 }
 
 .speaker-lecture {
   background-color: var(--color-white);
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .speaker-lecture__text {
   font-family: "Gilroy", sans-serif;
-  font-weight: 400;
   font-style: normal;
-  font-size: 42px;
+  font-size: clamp(28px, 28px + 10 * (100vw - 320px) / 1216, 38px);
   color: var(--color-black);
   margin: 0;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .flip-card {
+    padding: 0;
+    height: clamp(280px, 280px + 220 * (100vw - 320px) / 1216, 500px);
+  }
+  .speaker-card {
+    height: 100%;
+    display: block;
+  }
+  .speaker-card__img {
+    border-radius: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px) clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px) 0 0;
+    width: 100%;
+    height: 55%;
+    object-fit: cover;
+  }
+  .speaker-card__content {
+    padding: 0;
+    margin: 0;
+    height: 44%;
+  }
+  .speaker-card__name {
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+  }
+  .speaker-card__position {
+    font-size: 13px;
+    text-align: center;
+  }
+  .speaker-card__description {
+    display: none;
+    font-size: 16px;
+    margin: 0;
+    text-align: start;
+  }
+  .speaker-card__more {
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    display: block;
+  }
+  .speaker-card__more span {
+    text-decoration: underline;
+  }
+  .speaker-card__socials {
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+  .speaker-card__social {
+    height: 100%;
+  }
+  .speaker-card__social:hover {
+    scale: 1;
+    opacity: 1;
+  }
+  .speaker-card__social-icon {
+    width: 100%;
+    height: 100%;
+  }
+  .speaker-lecture {
+    background-color: var(--color-white);
+    width: 100%;
+    height: 100%;
+    border-radius: clamp(12px, 12px + 8 * (100vw - 320px) / 1216, 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .speaker-lecture__text {
+    font-family: "Gilroy", sans-serif;
+    font-style: normal;
+    font-size: clamp(28px, 28px + 10 * (100vw - 320px) / 1216, 38px);
+    color: var(--color-black);
+    margin: 0;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=speaker-card.component.css.map */

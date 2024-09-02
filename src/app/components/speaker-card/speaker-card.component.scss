@@ -1,12 +1,21 @@
+@function adaptive-size($pcSize, $mobSize, $maxWidth: 1536, $minWidth: 320) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthCalc: $maxWidth - $minWidth;
 
+  $min: min($pcSize, $mobSize);
+  $max: max($pcSize, $mobSize);
 
+  @return calc(clamp(#{$min + px},
+  #{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthCalc}),
+  #{$max + px}));
+}
 
 .flip-card {
-  display: inline-block;
+  border: 1px solid red;
+  position: relative;
   background-color: transparent;
   width: 100%;
-  max-width: 570px;
-  height: 306px;
+  height: 332px;
   perspective: 1000px;
 
   &.flipped .flip-card-inner {
@@ -18,7 +27,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
@@ -34,112 +42,211 @@
   transform: rotateX(180deg);
 }
 
+$border-radius-size: adaptive-size(20, 12);
+
 
 .speaker-card {
+  border-radius: $border-radius-size;
+  padding: $border-radius-size;
   background-color: var(--color-white);
-  width: 100%;
   height: 100%;
-  border-radius: 20px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  &:hover {
-  }
-  &__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0 15px 20px;
-    flex: 1;
-    overflow: hidden;
 
-    img {
-      max-height: 100%;
-      max-width: 100%;
-      height: auto;
-      width: auto;
-      object-fit: cover;
-    }
+  &__img {
+    border-radius: $border-radius-size 0 0 $border-radius-size;
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
   &__content {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: 15px 20px 15px 60px;
+    margin: 0 0 0 $border-radius-size;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
   }
 
   &__name {
     font-family: 'Gilroy', sans-serif;
-    font-weight: 400;
     font-style: normal;
-    font-size: 27px;
+    font-size: 32px;
     color: var(--color-black);
     margin: 0;
     text-align: start;
   }
 
   &__position {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
+    font-family: 'Gilroy', sans-serif;
     font-style: normal;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color-black);
     margin: 0;
     text-align: start;
+    line-height: 1.5;
   }
 
   &__description {
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
     color: var(--color-black);
     text-align: start;
   }
 
+  &__more {
+    display: none;
+  }
+
   &__socials {
+    //border: 1px solid red;
     display: flex;
     justify-content: start;
-    flex-direction: row;
+    gap: $border-radius-size;
+  }
 
-  }
   &__social {
-    margin-right: 16px;
-    width: 25px;
+    width: auto;
     height: 25px;
-  }
-  &__social-icon {
-    width: 20px;
-    height: 20px;
+
     &:hover {
-      scale: 1.1;
+      scale: 1.05;
       opacity: 0.6;
     }
+  }
+
+  &__social-icon {
+    width: 100%;
+    height: 100%;
   }
 
 }
 
 
-.speaker-lecture{
+.speaker-lecture {
   background-color: var(--color-white);
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: $border-radius-size;
   display: flex;
   align-items: center;
   justify-content: center;
-  &__text{
+
+  &__text {
     font-family: 'Gilroy', sans-serif;
-    font-weight: 400;
     font-style: normal;
-    font-size: 42px;
+    font-size: adaptive-size(38, 28);
     color: var(--color-black);
     margin: 0;
     text-align: center;
   }
 }
+
+
+@media (max-width: 640px) {
+
+  .flip-card {
+    padding: 0;
+    //height: 400px;
+    height: adaptive-size(500, 280);
+  }
+
+  .speaker-card {
+    height: 100%;
+    display: block;
+
+    &__img {
+      border-radius: $border-radius-size $border-radius-size 0 0;
+      width: 100%;
+      height: 55%;
+      object-fit: cover;
+
+    }
+
+    &__content {
+      padding: 0;
+      margin: 0;
+      height: 44%;
+    }
+
+    &__name {
+      font-size: 16px;
+      text-align: center;
+      line-height: 2;
+    }
+
+    &__position {
+      font-size: 13px;
+      text-align: center;
+    }
+
+    &__description {
+      display: none;
+      font-size: 16px;
+      margin: 0;
+      text-align: start;
+    }
+
+    &__more {
+      font-family: "Work Sans", sans-serif;
+      font-size: 12px;
+      display: block;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    &__socials {
+      height: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__social {
+      height: 100%;
+
+      &:hover {
+        scale: 1;
+        opacity: 1;
+      }
+    }
+
+    &__social-icon {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+  .speaker-lecture {
+    background-color: var(--color-white);
+    width: 100%;
+    height: 100%;
+    border-radius: $border-radius-size;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+      font-family: 'Gilroy', sans-serif;
+      font-style: normal;
+      font-size: adaptive-size(38, 28);
+      color: var(--color-black);
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+
+}
+
+

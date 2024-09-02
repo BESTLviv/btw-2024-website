@@ -23,11 +23,8 @@ export class SpeakerCardComponent {
 
   isFlipped: boolean = false;
 
-  constructor(private cd: ChangeDetectorRef) { }
-
   flipCard(): void {
     this.isFlipped = !this.isFlipped;
-    this.cd.markForCheck();
   }
 
 }

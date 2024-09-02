@@ -1,27 +1,69 @@
+@function adaptive-size($pcSize, $mobSize, $maxWidth: 1536, $minWidth: 320) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthCalc: $maxWidth - $minWidth;
+
+  $min: min($pcSize, $mobSize);
+  $max: max($pcSize, $mobSize);
+
+  @return calc(clamp(#{$min + px},
+  #{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthCalc}),
+  #{$max + px}));
+}
+
+
+speaker-card__blur {
+
+  &-active {
+    position: fixed !important;
+    overflow: visible !important;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 200vh;
+    z-index: 1000;
+    background-color: rgb(117, 27, 27);
+  }
+
+  &-inactive {
+    display: none;
+  }
+
+}
+
 
 .swiper-container-wrapper {
   position: relative;
-
+  padding: 0 adaptive-size(28, 21);
 }
 
 
 swiper-container {
   width: 100%;
   height: 100%;
-
 }
 
 .swiper-container {
-  //padding: 0 240px;
+  border: 1px solid red;
+  position: relative;
+  padding: 0 adaptive-size(85, 21);
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 swiper-slide {
+
+  border: 1px solid red;
   text-align: center;
-  padding: 0 0 40px 0;
+  padding-bottom: 40px;
   transition: all 0.3s ease;
-  &:hover{
+
+  &:hover {
     opacity: 0.8;
   }
+}
+
+swiper-slide.swiper-slide-active {
 }
 
 swiper-container::part(button-prev),
@@ -32,24 +74,25 @@ swiper-container::part(button-next) {
 swiper-container::part(pagination) {
 }
 
-swiper-container::part(bullet-active) {
-  background-color: #6109D1;
-  cursor: none;
-  width: 13px;
-  height: 13px;
-  margin: -35px 13px 0 13px;
-}
 
+$bullet-size: adaptive-size(13, 7);
 
 swiper-container::part(bullet) {
   background-color: var(--color-white);
-  margin: -35px 13px 0 13px;
-  width: 13px;
-  height: 13px;
+  margin: -35px $bullet-size 0 $bullet-size;
+  width: $bullet-size;
+  height: $bullet-size;
   opacity: 1;
   cursor: none;
 }
 
+swiper-container::part(bullet-active) {
+  background-color: #6109D1;
+  margin: -35px $bullet-size 0 $bullet-size;
+  cursor: none;
+  width: $bullet-size;
+  height: $bullet-size;
+}
 
 .custom-nav-button {
   position: absolute;
@@ -59,7 +102,7 @@ swiper-container::part(bullet) {
   background: none;
   z-index: 10;
   padding: 0;
-  width: 77px;
+  width: adaptive-size(67, 29);
   transition: all 0.3s ease;
 
   img {
@@ -79,13 +122,33 @@ swiper-container::part(bullet) {
 }
 
 .custom-prev-button {
-  left: 77px;
+  left: 0;
 }
 
 .custom-next-button {
-  right: 77px;
+  right: 0;
 }
 
+@media (max-width: 1024px) {
+  .swiper-container {
+
+    padding: 0 adaptive-size(50, 25, 1024, 390);
+
+  }
+}
+
+
+@media (max-width: 640px) {
+  swiper-slide {
+    border: 1px solid green;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
 
 
 
