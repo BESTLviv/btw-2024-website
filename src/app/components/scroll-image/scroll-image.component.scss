@@ -1,16 +1,48 @@
+@function adaptive-size($pcSize, $mobSize, $maxWidth: 1536, $minWidth: 320) {
+  $addSize: $pcSize - $mobSize;
+  $maxWidthCalc: $maxWidth - $minWidth;
+
+  $min: min($pcSize, $mobSize);
+  $max: max($pcSize, $mobSize);
+
+  @return calc(clamp(#{$min + px},
+  #{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidthCalc}),
+  #{$max + px}));
+}
+
+
 .container {
   width: 100%;
-  height: 30px; /* Задайте висоту на ваш розсуд */
+  height: 0;
   position: relative;
+  z-index: 100;
   background-color: #f0f0f0;
 }
 
-.moving-div {
-  width: 20px;
-  height: 30px;
+.image {
+  height: auto;
+  width: adaptive-size(800, 250);
   position: absolute;
+  z-index: 100;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: #007bff;
-  transition: left 0.1s ease-out;
+  transition: left 3.0s cubic-bezier(0.175, 0.885, 0.32, 1.105);
 }
+
+
+@keyframes combined-animation {
+  0%, 100% {
+    transform: translate(-53%, -48%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform:translate(-50%, -50%) scale(1.03);
+    opacity: 0.85;
+  }
+}
+
+.animated-object {
+  animation: combined-animation 5s infinite ease-in-out;
+}
+
+
+

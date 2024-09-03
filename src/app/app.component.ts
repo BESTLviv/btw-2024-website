@@ -24,6 +24,7 @@ import {StarBackgroundFixedComponent} from "./components/star-background-fixed/s
 import {PhotosSectionComponent} from "./components/photos-section/photos-section.component";
 import {OrganizationSectionComponent} from "./components/organization-section/organization-section.component";
 import {ScrollImageComponent} from "./components/scroll-image/scroll-image.component";
+import {ScrollTestComponent} from "./components/scroll-test/scroll-test.component";
 
 
 @Component({
@@ -45,7 +46,7 @@ import {ScrollImageComponent} from "./components/scroll-image/scroll-image.compo
     TimerComponent,
     Marquee1Component,
     Marquee2Component,
-    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent, OrganizationSectionComponent, ScrollImageComponent],
+    BotSectionComponent, SpeakersSectionComponent, HeroSectionComponent, PlanetComponent, TeamSectionComponent, StarBackgroundFixedComponent, PhotosSectionComponent, OrganizationSectionComponent, ScrollImageComponent, ScrollTestComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
