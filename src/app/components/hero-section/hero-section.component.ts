@@ -50,10 +50,10 @@ export class HeroSectionComponent implements OnInit, OnDestroy {
       this.minutes = this.padZero(minutes);
       this.seconds = this.padZero(seconds);
     } else {
-      this.days = '00';
-      this.hours = '00';
-      this.minutes = '00';
-      this.seconds = '00';
+      this.days = '13';
+      this.hours = '13';
+      this.minutes = '13';
+      this.seconds = '13';
       this.subscription.unsubscribe();
     }
   }

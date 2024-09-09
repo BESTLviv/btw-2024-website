@@ -1,5 +1,4 @@
 .flip-card {
-  border: 1px solid red;
   position: relative;
   background-color: transparent;
   width: 100%;
@@ -46,6 +45,7 @@
   object-position: top;
 }
 .speaker-card__content {
+  width: 60%;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -71,14 +71,25 @@
   text-align: start;
   line-height: 1.5;
 }
-.speaker-card__description {
+.speaker-card__time {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   color: var(--color-black);
   text-align: start;
+  line-height: 2;
+}
+.speaker-card__place {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0;
+  color: var(--color-black);
+  text-align: start;
+  line-height: 2;
 }
 .speaker-card__more {
   display: none;
@@ -109,20 +120,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
 }
 .speaker-lecture__text {
   font-family: "Gilroy", sans-serif;
   font-style: normal;
   font-size: clamp(28px, 28px + 10 * (100vw - 320px) / 1216, 38px);
   color: var(--color-black);
-  margin: 0;
   text-align: center;
+}
+.speaker-lecture__description {
+  display: none;
 }
 
 @media (max-width: 640px) {
   .flip-card {
     padding: 0;
-    height: clamp(280px, 280px + 220 * (100vw - 320px) / 1216, 500px);
+    height: clamp(330px, 580px + -250 * (100vw - 640px) / -320, 580px);
   }
   .speaker-card {
     height: 100%;
@@ -133,37 +147,53 @@
     width: 100%;
     height: 55%;
     object-fit: cover;
+    object-position: center;
   }
   .speaker-card__content {
     padding: 0;
-    margin: 0;
+    margin: 0 0;
     height: 44%;
+    width: 100%;
   }
   .speaker-card__name {
-    font-size: 16px;
+    font-size: clamp(16px, 32px + -16 * (100vw - 640px) / -320, 32px);
     text-align: center;
-    line-height: 2;
+    line-height: 1.5;
   }
   .speaker-card__position {
-    font-size: 13px;
+    line-height: 1.2;
+    font-size: clamp(13px, 25px + -12 * (100vw - 640px) / -320, 25px);
     text-align: center;
   }
   .speaker-card__description {
     display: none;
-    font-size: 16px;
-    margin: 0;
-    text-align: start;
+  }
+  .speaker-card__time {
+    font-size: 10px;
+    text-align: center;
+    line-height: 2;
+  }
+  .speaker-card__place {
+    font-size: 10px;
+    text-align: center;
+    line-height: 2;
   }
   .speaker-card__more {
     font-family: "Work Sans", sans-serif;
-    font-size: 12px;
+    font-size: clamp(11px, 16px + -5 * (100vw - 640px) / -320, 16px);
     display: block;
+    position: relative;
   }
-  .speaker-card__more span {
+  .speaker-card__more-text {
     text-decoration: underline;
   }
+  .speaker-card__more-arrow {
+    font-size: clamp(16px, 20px + -4 * (100vw - 640px) / -320, 20px);
+    position: relative;
+    top: 7px;
+  }
   .speaker-card__socials {
-    height: 15px;
+    height: clamp(15px, 30px + -15 * (100vw - 640px) / -320, 30px);
     align-items: center;
     justify-content: center;
   }
@@ -189,12 +219,39 @@
     justify-content: center;
   }
   .speaker-lecture__text {
-    font-family: "Gilroy", sans-serif;
+    display: none;
+  }
+  .speaker-lecture__description {
+    display: block;
+  }
+  .speaker-lecture__point-title {
+    font-weight: 700;
+  }
+  .speaker-lecture__lecture-title {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: clamp(28px, 28px + 10 * (100vw - 320px) / 1216, 38px);
-    color: var(--color-black);
+    font-size: 16px;
     margin: 0;
-    text-align: center;
+    color: var(--color-black);
+    text-align: left;
+    line-height: 1;
+  }
+  .speaker-lecture__time {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1;
+  }
+  .speaker-lecture__place {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1;
   }
 }
 

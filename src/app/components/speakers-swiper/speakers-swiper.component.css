@@ -23,7 +23,6 @@ swiper-container {
 }
 
 .swiper-container {
-  border: 1px solid red;
   position: relative;
   padding: 0 clamp(21px, 21px + 64 * (100vw - 320px) / 1216, 85px);
   height: 100%;
@@ -32,7 +31,6 @@ swiper-container {
 }
 
 swiper-slide {
-  border: 1px solid red;
   text-align: center;
   padding-bottom: 40px;
   transition: all 0.3s ease;
@@ -102,7 +100,6 @@ swiper-container::part(bullet-active) {
 }
 @media (max-width: 640px) {
   swiper-slide {
-    border: 1px solid green;
     padding-left: 15px;
     padding-right: 15px;
   }

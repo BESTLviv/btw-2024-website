@@ -15,6 +15,8 @@ export class SpeakerCardComponent {
   @Input() name?: string;
   @Input() position?: string;
   @Input() description?: string;
+  @Input() time?: string;
+  @Input() place?: string;
   @Input() imageUrl?: string;
   @Input() instagramUrl?: string;
   @Input() telegramUrl?: string;

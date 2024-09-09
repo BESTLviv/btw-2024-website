@@ -1,4 +1,3 @@
-
 <div class="flip-card" (click)="flipCard()" [class.flipped]="isFlipped">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -11,11 +10,18 @@
             <h2 class="speaker-card__name">{{ name }}</h2>
             <p class="speaker-card__position">{{ position }}</p>
           </div>
-          <p class="speaker-card__description">{{ description }}</p>
-          <p class="speaker-card__more"><span>Дізнатися більше</span> ⏶</p>
+          <div class="speaker-card__description">
+            <p class="speaker-card__time">{{ time }}</p>
+            <p class="speaker-card__place">{{ place }}</p>
+          </div>
+          <p class="speaker-card__more">
+            <span class="speaker-card__more-text">Дізнатися більше</span>
+            <span class="speaker-card__more-arrow"> ˆ</span>
+          </p>
 
           <div class="speaker-card__socials">
-            <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social" (click)="$event.stopPropagation()">
+            <a *ngIf="instagramUrl" [href]="instagramUrl" class="speaker-card__social"
+               (click)="$event.stopPropagation()">
               <img src="/speakers-section/instagram.svg" alt="Instagram"
                    class="speaker-card__social-icon">
             </a>
@@ -34,7 +40,11 @@
     <div class="flip-card-back">
       <div class="speaker-lecture">
         <p class="speaker-lecture__text">{{ lectureTitle }}</p>
-        <p class="speaker-lecture__description">{{ description }}</p>
+        <div class="speaker-lecture__description">
+          <p class="speaker-lecture__lecture-title"><span class="speaker-lecture__point-title">Тема:</span> {{ lectureTitle }}</p>
+          <p class="speaker-lecture__time"><span class="speaker-lecture__point-title">Коли:</span> {{ time }}</p>
+          <p class="speaker-lecture__place"><span class="speaker-lecture__point-title">Де:</span> {{ place }}</p>
+        </div>
       </div>
     </div>
   </div>
