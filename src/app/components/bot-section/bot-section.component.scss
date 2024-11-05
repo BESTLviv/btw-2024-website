@@ -12,7 +12,7 @@
   #{$max + px}));
 }
 
-
+//знаю, що тупо, але так треба було
 @function adaptive-size2($pcSize, $mobSize) {
   $minWidth: 100;
   $maxWidth: 1320;
