@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow:
+Sitemap: https://btw2024.best-lviv.org.ua/sitemap.xml
+
