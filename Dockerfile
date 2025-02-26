@@ -20,8 +20,8 @@ FROM nginx:alpine
 # Copy the built Angular application from the previous stage
 COPY --from=build /app/dist/your-angular-app /usr/share/nginx/html
 
-# Copy custom nginx configuration
-COPY nginx.conf /etc/nginx/nginx.conf
+# Set the port environment variable for nginx
+ENV NGINX_PORT=3000
 
 # Expose port 3000
 EXPOSE 3000
