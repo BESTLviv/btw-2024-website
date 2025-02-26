@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN npm ci
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
@@ -14,14 +14,17 @@ COPY . .
 # Build the Angular application
 RUN npm run build --prod
 
-# Stage 2: Serve the Angular application with Nginx
+# Stage 2: Serve the Angular application with nginx
 FROM nginx:alpine
 
-# Copy the build output to Nginx's web root
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy the built Angular application from the previous stage
+COPY --from=build /app/dist/your-angular-app /usr/share/nginx/html
 
-# Expose port 80
-EXPOSE 80
+# Copy custom nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Start Nginx server
+# Expose port 3000
+EXPOSE 3000
+
+# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
